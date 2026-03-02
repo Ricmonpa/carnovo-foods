@@ -32,10 +32,18 @@ Si GitHub te pide autenticación, usa un **Personal Access Token** (Settings →
 3. **Import Git Repository**: elige el repo `carnovo-foods` (o el nombre que hayas usado).
 4. Vercel detectará que es un sitio estático:
    - **Framework Preset:** Other (o “No framework”).
-   - **Root Directory:** dejar por defecto.
-   - **Build Command:** dejar vacío.
-   - **Output Directory:** dejar vacío.
+   - **Root Directory:** `public` (el sitio está en esa carpeta).
+   - **Build Command:** vacío.
+   - **Output Directory:** vacío.
 5. **Deploy**. En unos segundos tendrás una URL tipo `carnovo-foods.vercel.app`.
+
+### Si ya desplegaste y ves **404: NOT_FOUND**
+
+1. Vercel → tu proyecto → **Settings** → **General**.
+2. En **Root Directory** escribe: `public` → **Save**.
+3. **Build & Development Settings**: **Build Command** y **Output Directory** vacíos.
+4. **Deployments** → menú (⋯) del último deploy → **Redeploy**.
+5. Cuando termine, la URL debería mostrar el sitio.
 
 ---
 

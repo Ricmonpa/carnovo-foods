@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carnovo Foods | El Gigante Cárnico</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'carnovo-red': '#B91C1C',
+                        'carnovo-dark': '#0F172A',
+                        'carnovo-gold': '#F59E0B',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Efecto de superposición premium (más oscuro abajo para leer el texto) */
+        .video-overlay {
+            background: linear-gradient(to right, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.4) 50%, rgba(15, 23, 42, 0.1) 100%),
+                        linear-gradient(to top, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0) 25%);
+        }
+        
+        /* Animación HIPNÓTICA para el video de fondo (paneo lento cinematográfico) */
+        @keyframes slowPan {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+            100% { transform: scale(1); }
+        }
+        .cinematic-video {
+            animation: slowPan 25s ease-in-out infinite;
+        }
+
+        .section-bg {
+            background-color: #0F172A;
+            background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+        }
+
+        /* Logo en blanco para que se vea sobre fondo oscuro */
+        .logo-white {
+            filter: brightness(0) invert(1);
+        }
+    </style>
+</head>
+<body class="bg-carnovo-dark text-white font-sans antialiased overflow-x-hidden">
+
+    <!-- NAVBAR (Sticky) -->
+    <nav class="fixed w-full z-50 bg-carnovo-dark/80 backdrop-blur-lg border-b border-gray-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <!-- Logo -->
+                <a href="#" class="flex-shrink-0 flex items-center">
+                    <img src="carnovo-logo.png" alt="Carnovo Foods & Meat Trader" class="h-16 sm:h-20 w-auto object-contain logo-white">
+                </a>
+                <!-- Menú Desktop -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-300 hover:text-white transition font-medium tracking-wide">Nosotros</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition font-medium tracking-wide">Catálogo Mayoreo</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition font-medium tracking-wide">Food Service</a>
+                    <!-- Botón B2C -->
+                    <a href="#" class="bg-transparent border border-gray-400 text-white px-6 py-2.5 rounded-full hover:border-white hover:bg-white/10 transition flex items-center gap-2">
+                        <i class="fa-solid fa-store"></i> Tienda Virtual
+                    </a>
+                    <!-- Botón B2B -->
+                    <a href="#" class="bg-carnovo-red text-white px-8 py-3 rounded-full font-bold hover:bg-red-700 transition shadow-[0_0_20px_rgba(185,28,28,0.4)]">
+                        Cotizar Volumen
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION CINEMATOGRÁFICO -->
+    <div class="relative h-screen flex items-center overflow-hidden bg-carnovo-dark">
+        
+        <!-- VIDEO DE PORTADA (hero-video.mp4 = copia sin acentos para carga fiable) -->
+        <video class="absolute inset-0 w-full h-full object-cover z-0 cinematic-video" autoplay loop muted playsinline preload="auto">
+            <source src="hero-video.mp4" type="video/mp4">
+        </video>
+        
+        <!-- Overlay Oscuro con degradado para resaltar el texto -->
+        <div class="absolute inset-0 video-overlay z-10"></div>
+
+        <!-- Contenido Hero Principal -->
+        <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-20">
+            <div class="max-w-3xl">
+                <div class="inline-block bg-black/40 border border-carnovo-red/50 px-5 py-2 rounded-full text-white font-semibold tracking-widest text-xs uppercase mb-8 backdrop-blur-md shadow-lg">
+                    <span class="text-carnovo-red font-bold">●</span> Calidad de Exportación Mundial
+                </div>
+                
+                <h1 class="text-6xl md:text-8xl font-bold leading-[1.1] mb-6 drop-shadow-2xl">
+                    La Fuerza Cárnica <br>
+                    <span class="font-serif text-carnovo-red italic font-light tracking-tight">Directo de Origen.</span>
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl leading-relaxed drop-shadow-lg font-light">
+                    Músculo mayorista para abastecer a la industria, con la agilidad digital para llegar hasta tu mesa. Volumen sin límites.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-5">
+                    <button class="bg-carnovo-red hover:bg-red-700 text-white font-bold py-4 px-10 rounded-lg flex items-center justify-center gap-3 transition transform hover:scale-105 shadow-[0_10px_30px_rgba(185,28,28,0.5)]">
+                        <i class="fa-solid fa-truck-fast text-2xl"></i>
+                        <span class="text-lg">Ventas por Volumen</span>
+                    </button>
+                    <button class="bg-white/5 hover:bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold py-4 px-10 rounded-lg flex items-center justify-center gap-3 transition transform hover:scale-105">
+                        <i class="fa-solid fa-bag-shopping text-2xl"></i>
+                        <span class="text-lg">Comprar para el Hogar</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+            <p class="text-white/50 text-xs tracking-widest uppercase mb-2 text-center">Descubre Más</p>
+            <i class="fa-solid fa-chevron-down text-white/50 text-xl block text-center"></i>
+        </div>
+    </div>
+
+    <!-- SECCIÓN: MODELO DE NEGOCIO -->
+    <section class="py-24 section-bg border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold tracking-widest text-carnovo-red uppercase mb-3">Nuestra Infraestructura</h2>
+                <h3 class="text-4xl md:text-5xl font-serif font-bold text-white mb-6">Abastecemos a todos los niveles</h3>
+                <p class="text-gray-400 max-w-3xl mx-auto text-lg">A diferencia de la competencia, Carnovo fusiona la capacidad de un gran centro de distribución con la experiencia premium de una boutique virtual.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Tarjeta 1: Mayoristas -->
+                <div class="bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-carnovo-red transition duration-300 group shadow-lg hover:shadow-carnovo-red/20 hover:-translate-y-2 cursor-pointer">
+                    <div class="w-16 h-16 bg-gradient-to-br from-carnovo-red/20 to-transparent rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
+                        <i class="fa-solid fa-boxes-stacked text-3xl text-carnovo-red"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4">Gran Mayoreo</h4>
+                    <p class="text-gray-400 mb-6">Capacidad logística para competir con los grandes del sector. Abastecimiento constante para carnicerías, procesadoras y empacadoras.</p>
+                    <a href="#" class="text-carnovo-red font-bold hover:text-white transition flex items-center gap-2 mt-auto">Ver Catálogo Industrial <i class="fa-solid fa-arrow-right group-hover:translate-x-2 transition"></i></a>
+                </div>
+
+                <!-- Tarjeta 2: Food Service -->
+                <div class="bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-carnovo-gold transition duration-300 group shadow-lg hover:shadow-carnovo-gold/20 hover:-translate-y-2 cursor-pointer">
+                    <div class="w-16 h-16 bg-gradient-to-br from-carnovo-gold/20 to-transparent rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
+                        <i class="fa-solid fa-utensils text-3xl text-carnovo-gold"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4">Food Service / HORECA</h4>
+                    <p class="text-gray-400 mb-6">Cortes estandarizados y porcionados para restaurantes, hoteles y taquerías. Entendemos el ritmo de tu cocina y garantizamos rendimiento.</p>
+                    <a href="#" class="text-carnovo-gold font-bold hover:text-white transition flex items-center gap-2 mt-auto">Cotizar Menú <i class="fa-solid fa-arrow-right group-hover:translate-x-2 transition"></i></a>
+                </div>
+
+                <!-- Tarjeta 3: B2C Virtual -->
+                <div class="bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-blue-500 transition duration-300 group shadow-lg hover:shadow-blue-500/20 hover:-translate-y-2 cursor-pointer relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-gradient-to-l from-blue-600 to-blue-400 text-xs font-bold px-4 py-1.5 rounded-bl-xl shadow-lg">NUEVO</div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-transparent rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
+                        <i class="fa-solid fa-mobile-screen text-3xl text-blue-500"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4">Carnicería Virtual</h4>
+                    <p class="text-gray-400 mb-6">La calidad del mercado mayorista, llevada directamente a la puerta de tu casa. Cortes finos, empaquetados al vacío y listos para el asador.</p>
+                    <a href="#" class="text-blue-400 font-bold hover:text-white transition flex items-center gap-2 mt-auto">Visitar Tienda en Línea <i class="fa-solid fa-arrow-right group-hover:translate-x-2 transition"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER MINIMALISTA -->
+    <footer class="bg-gray-950 border-t border-gray-900 pt-16 pb-8 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <img src="carnovo-logo.png" alt="Carnovo Foods & Meat Trader" class="h-14 w-auto object-contain logo-white">
+                </div>
+                <div class="text-gray-600 text-sm text-center md:text-right">
+                    <p>Potenciado por WordPress & WooCommerce</p>
+                    <p class="mt-1">Designed by <span class="text-carnovo-red font-bold tracking-widest">POTENTTIAL GROUP</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
