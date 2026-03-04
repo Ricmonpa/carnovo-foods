@@ -61,20 +61,18 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-24">
                 <!-- Logo -->
-                <a href="#" class="flex-shrink-0 flex items-center">
+                <a href="#inicio" class="flex-shrink-0 flex items-center">
                     <img src="carnovo-logo.png" alt="Carnovo Foods & Meat Trader" class="h-16 sm:h-20 w-auto object-contain logo-white">
                 </a>
                 <!-- Menú Desktop -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#" class="text-gray-300 hover:text-white transition font-medium tracking-wide">Nosotros</a>
-                    <a href="#" class="text-gray-300 hover:text-white transition font-medium tracking-wide">Catálogo Mayoreo</a>
-                    <a href="#" class="text-gray-300 hover:text-white transition font-medium tracking-wide">Food Service</a>
-                    <!-- Botón B2C -->
-                    <a href="#" class="bg-transparent border border-gray-400 text-white px-6 py-2.5 rounded-full hover:border-white hover:bg-white/10 transition flex items-center gap-2">
-                        <i class="fa-solid fa-store"></i> Tienda Virtual
-                    </a>
+                    <a href="#nosotros" class="text-gray-300 hover:text-white transition font-medium tracking-wide">Nosotros</a>
+                    <a href="#catalogo-mayoreo" class="text-gray-300 hover:text-white transition font-medium tracking-wide">Catálogo Mayoreo</a>
+                    <a href="#food-service" class="text-gray-300 hover:text-white transition font-medium tracking-wide">Food Service</a>
+                    <a href="#blog" class="text-gray-300 hover:text-white transition font-medium tracking-wide">Blog</a>
+                    <a href="#contacto" class="text-gray-300 hover:text-white transition font-medium tracking-wide">Contacto</a>
                     <!-- Botón B2B -->
-                    <a href="#" class="bg-carnovo-red text-white px-8 py-3 rounded-full font-bold hover:bg-red-700 transition shadow-[0_0_20px_rgba(185,28,28,0.4)]">
+                    <a href="#contacto" class="bg-carnovo-red text-white px-8 py-3 rounded-full font-bold hover:bg-red-700 transition shadow-[0_0_20px_rgba(185,28,28,0.4)]">
                         Cotizar Volumen
                     </a>
                 </div>
@@ -83,7 +81,7 @@
     </nav>
 
     <!-- HERO SECTION CINEMATOGRÁFICO -->
-    <div class="relative h-screen flex items-center overflow-hidden bg-carnovo-dark">
+    <div id="inicio" class="relative h-screen flex items-center overflow-hidden bg-carnovo-dark">
         
         <!-- VIDEO DE PORTADA (hero-video.mp4 = copia sin acentos para carga fiable) -->
         <video class="absolute inset-0 w-full h-full object-cover z-0 cinematic-video" autoplay loop muted playsinline preload="auto">
@@ -110,27 +108,32 @@
                 </p>
                 
                 <div class="flex flex-col sm:flex-row gap-5">
-                    <button class="bg-carnovo-red hover:bg-red-700 text-white font-bold py-4 px-10 rounded-lg flex items-center justify-center gap-3 transition transform hover:scale-105 shadow-[0_10px_30px_rgba(185,28,28,0.5)]">
+                    <a href="#contacto" class="bg-carnovo-red hover:bg-red-700 text-white font-bold py-4 px-10 rounded-lg flex items-center justify-center gap-3 transition transform hover:scale-105 shadow-[0_10px_30px_rgba(185,28,28,0.5)]">
                         <i class="fa-solid fa-truck-fast text-2xl"></i>
                         <span class="text-lg">Ventas por Volumen</span>
-                    </button>
-                    <button class="bg-white/5 hover:bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold py-4 px-10 rounded-lg flex items-center justify-center gap-3 transition transform hover:scale-105">
-                        <i class="fa-solid fa-bag-shopping text-2xl"></i>
-                        <span class="text-lg">Comprar para el Hogar</span>
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
         
         <!-- Scroll indicator -->
-        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
-            <p class="text-white/50 text-xs tracking-widest uppercase mb-2 text-center">Descubre Más</p>
+        <a href="#nosotros" class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce block text-center">
+            <p class="text-white/50 text-xs tracking-widest uppercase mb-2">Descubre Más</p>
             <i class="fa-solid fa-chevron-down text-white/50 text-xl block text-center"></i>
-        </div>
+        </a>
     </div>
 
+    <!-- SECCIÓN: NOSOTROS -->
+    <section id="nosotros" class="py-24 section-bg border-t border-gray-800 scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-sm font-bold tracking-widest text-carnovo-red uppercase mb-3">Quiénes somos</h2>
+            <h3 class="text-4xl md:text-5xl font-serif font-bold text-white mb-6">El Gigante Cárnico</h3>
+            <p class="text-gray-400 max-w-3xl mx-auto text-lg">Calidad de exportación mundial. Conectamos origen con industria, mayoristas y food service, con la agilidad y el estándar que el sector exige.</p>
+        </div>
+    </section>
+
     <!-- SECCIÓN: MODELO DE NEGOCIO -->
-    <section class="py-24 section-bg border-t border-gray-800">
+    <section id="nuestra-infraestructura" class="py-24 section-bg border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-sm font-bold tracking-widest text-carnovo-red uppercase mb-3">Nuestra Infraestructura</h2>
@@ -140,41 +143,50 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Tarjeta 1: Mayoristas -->
-                <div class="bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-carnovo-red transition duration-300 group shadow-lg hover:shadow-carnovo-red/20 hover:-translate-y-2 cursor-pointer">
+                <div id="catalogo-mayoreo" class="bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-carnovo-red transition duration-300 group shadow-lg hover:shadow-carnovo-red/20 hover:-translate-y-2 cursor-pointer scroll-mt-24">
                     <div class="w-16 h-16 bg-gradient-to-br from-carnovo-red/20 to-transparent rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
                         <i class="fa-solid fa-boxes-stacked text-3xl text-carnovo-red"></i>
                     </div>
                     <h4 class="text-2xl font-bold mb-4">Gran Mayoreo</h4>
                     <p class="text-gray-400 mb-6">Capacidad logística para competir con los grandes del sector. Abastecimiento constante para carnicerías, procesadoras y empacadoras.</p>
-                    <a href="#" class="text-carnovo-red font-bold hover:text-white transition flex items-center gap-2 mt-auto">Ver Catálogo Industrial <i class="fa-solid fa-arrow-right group-hover:translate-x-2 transition"></i></a>
+                    <a href="#catalogo-mayoreo" class="text-carnovo-red font-bold hover:text-white transition flex items-center gap-2 mt-auto">Ver Catálogo Industrial <i class="fa-solid fa-arrow-right group-hover:translate-x-2 transition"></i></a>
                 </div>
 
                 <!-- Tarjeta 2: Food Service -->
-                <div class="bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-carnovo-gold transition duration-300 group shadow-lg hover:shadow-carnovo-gold/20 hover:-translate-y-2 cursor-pointer">
+                <div id="food-service" class="bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-carnovo-gold transition duration-300 group shadow-lg hover:shadow-carnovo-gold/20 hover:-translate-y-2 cursor-pointer scroll-mt-24">
                     <div class="w-16 h-16 bg-gradient-to-br from-carnovo-gold/20 to-transparent rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
                         <i class="fa-solid fa-utensils text-3xl text-carnovo-gold"></i>
                     </div>
                     <h4 class="text-2xl font-bold mb-4">Food Service / HORECA</h4>
                     <p class="text-gray-400 mb-6">Cortes estandarizados y porcionados para restaurantes, hoteles y taquerías. Entendemos el ritmo de tu cocina y garantizamos rendimiento.</p>
-                    <a href="#" class="text-carnovo-gold font-bold hover:text-white transition flex items-center gap-2 mt-auto">Cotizar Menú <i class="fa-solid fa-arrow-right group-hover:translate-x-2 transition"></i></a>
+                    <a href="#contacto" class="text-carnovo-gold font-bold hover:text-white transition flex items-center gap-2 mt-auto">Cotizar Menú <i class="fa-solid fa-arrow-right group-hover:translate-x-2 transition"></i></a>
                 </div>
 
-                <!-- Tarjeta 3: B2C Virtual -->
-                <div class="bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-blue-500 transition duration-300 group shadow-lg hover:shadow-blue-500/20 hover:-translate-y-2 cursor-pointer relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-gradient-to-l from-blue-600 to-blue-400 text-xs font-bold px-4 py-1.5 rounded-bl-xl shadow-lg">NUEVO</div>
-                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-transparent rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
-                        <i class="fa-solid fa-mobile-screen text-3xl text-blue-500"></i>
+                <!-- Tarjeta 3: B2C Virtual (próximamente) -->
+                <div class="bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-blue-500/50 transition duration-300 group relative overflow-hidden opacity-90">
+                    <div class="absolute top-0 right-0 bg-gray-600 text-xs font-bold px-4 py-1.5 rounded-bl-xl">PRÓXIMAMENTE</div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-transparent rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-mobile-screen text-3xl text-blue-500/70"></i>
                     </div>
                     <h4 class="text-2xl font-bold mb-4">Carnicería Virtual</h4>
                     <p class="text-gray-400 mb-6">La calidad del mercado mayorista, llevada directamente a la puerta de tu casa. Cortes finos, empaquetados al vacío y listos para el asador.</p>
-                    <a href="#" class="text-blue-400 font-bold hover:text-white transition flex items-center gap-2 mt-auto">Visitar Tienda en Línea <i class="fa-solid fa-arrow-right group-hover:translate-x-2 transition"></i></a>
+                    <span class="text-gray-500 font-medium">En desarrollo</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER MINIMALISTA -->
-    <footer class="bg-gray-950 border-t border-gray-900 pt-16 pb-8 relative z-10">
+    <!-- SECCIÓN: BLOG (placeholder) -->
+    <section id="blog" class="py-24 section-bg border-t border-gray-800 scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-sm font-bold tracking-widest text-carnovo-red uppercase mb-3">Blog / Revista</h2>
+            <h3 class="text-4xl md:text-5xl font-serif font-bold text-white mb-6">Noticias, recetas y tendencias</h3>
+            <p class="text-gray-400 max-w-3xl mx-auto text-lg">Próximamente: artículos del sector cárnico, recetas y contenido para profesionales y amantes de la buena carne.</p>
+        </div>
+    </section>
+
+    <!-- FOOTER + CONTACTO -->
+    <footer id="contacto" class="bg-gray-950 border-t border-gray-900 pt-16 pb-8 relative z-10 scroll-mt-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="flex items-center mb-4 md:mb-0">
