@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Cárnico | Carnovo Foods</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'carnovo-red': '#B91C1C',
+                        'carnovo-dark': '#0F172A',
+                        'carnovo-gold': '#F59E0B',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .section-bg {
+            background-color: #0F172A;
+            background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+        }
+        .text-shadow-premium {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .logo-white {
+            filter: brightness(0) invert(1);
+        }
+    </style>
+</head>
+<body class="bg-carnovo-dark text-white font-sans antialiased">
+
+    <!-- NAVBAR (Sticky) - alineado con sitio principal -->
+    <nav class="fixed w-full z-50 bg-carnovo-dark/95 backdrop-blur-md border-b border-gray-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <a href="../" class="flex-shrink-0 flex items-center">
+                    <img src="../carnovo-logo.png" alt="Carnovo Foods" class="h-16 md:h-20 w-auto object-contain object-left logo-white">
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../#inicio" class="text-gray-300 hover:text-white transition font-medium tracking-wide">Inicio</a>
+                    <a href="../#catalogo-mayoreo" class="text-gray-300 hover:text-white transition font-medium tracking-wide">Catálogo Mayoreo</a>
+                    <a href="../#food-service" class="text-gray-300 hover:text-white transition font-medium tracking-wide">Food Service</a>
+                    <a href="index.html" class="text-carnovo-red font-bold transition tracking-wide border-b-2 border-carnovo-red pb-1">Blog</a>
+                    <a href="../#contacto" class="text-gray-300 hover:text-white transition font-medium tracking-wide">Contacto</a>
+                    <a href="../#contacto" class="bg-carnovo-red text-white px-6 py-2 rounded-full font-bold hover:bg-red-700 transition shadow-[0_0_15px_rgba(185,28,28,0.4)] text-sm">
+                        Cotizar Volumen
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER DEL BLOG -->
+    <header class="pt-32 pb-12 section-bg border-b border-gray-800 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto">
+                <h1 class="text-5xl md:text-6xl font-bold mb-4 font-serif">
+                    Inteligencia <span class="text-carnovo-red italic">Cárnica</span>
+                </h1>
+                <p class="text-xl text-gray-400">Noticias del mercado mayorista, tendencias de precios, guías para food service y tips de asador para el consumidor final.</p>
+            </div>
+            <!-- Filtros / Categorías -->
+            <div class="mt-10 flex flex-wrap justify-center gap-3">
+                <button class="px-5 py-2 bg-carnovo-red text-white rounded-full font-semibold text-sm shadow-lg">Todos</button>
+                <button class="px-5 py-2 bg-gray-800 text-gray-300 hover:bg-gray-700 rounded-full font-medium text-sm transition">Mercado y Precios (B2B)</button>
+                <button class="px-5 py-2 bg-gray-800 text-gray-300 hover:bg-gray-700 rounded-full font-medium text-sm transition">Food Service</button>
+                <button class="px-5 py-2 bg-gray-800 text-gray-300 hover:bg-gray-700 rounded-full font-medium text-sm transition">Tips de Asador (B2C)</button>
+                <button class="px-5 py-2 bg-gray-800 text-gray-300 hover:bg-gray-700 rounded-full font-medium text-sm transition">Noticias Carnovo</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="py-16 bg-carnovo-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- ARTÍCULO DESTACADO -->
+            <a href="#" class="block mb-16 rounded-2xl overflow-hidden bg-gray-900 border border-gray-800 group cursor-pointer flex flex-col md:flex-row shadow-2xl hover:border-carnovo-red/50 transition duration-300">
+                <div class="md:w-3/5 relative overflow-hidden h-72 md:h-auto">
+                    <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Gráficas y carne" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    <div class="absolute top-4 left-4 bg-carnovo-red text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">
+                        Tendencias B2B
+                    </div>
+                </div>
+                <div class="md:w-2/5 p-8 md:p-12 flex flex-col justify-center relative">
+                    <div class="flex items-center gap-3 text-sm text-gray-400 mb-4">
+                        <span><i class="fa-regular fa-calendar mr-2"></i> 3 de Marzo, 2026</span>
+                        <span>•</span>
+                        <span><i class="fa-regular fa-clock mr-2"></i> 5 min lectura</span>
+                    </div>
+                    <h2 class="text-3xl font-bold font-serif mb-4 group-hover:text-carnovo-red transition duration-300 leading-tight">Análisis del Mercado: Comportamiento del precio de la canal de res en el bajío</h2>
+                    <p class="text-gray-400 mb-6 text-lg">Revisamos los datos extraídos de nuestro tabulador inteligente. Descubre por qué los precios de la proteína bovina están fluctuando y cómo prepararte para las compras del próximo trimestre.</p>
+                    <div class="mt-auto">
+                        <span class="text-carnovo-red font-bold flex items-center gap-2 group-hover:translate-x-2 transition duration-300">Leer Artículo Completo <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- GRID DE ARTÍCULOS -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <article class="bg-gray-900 rounded-xl overflow-hidden border border-gray-800 hover:border-gray-600 transition duration-300 group cursor-pointer flex flex-col">
+                    <a href="#" class="flex flex-col flex-grow">
+                        <div class="relative h-56 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1594046243098-0fceea9d451e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ribeye asado" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                            <div class="absolute top-3 left-3 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Tips de Asador</div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="text-xs text-gray-500 mb-3"><i class="fa-regular fa-calendar mr-1"></i> 28 de Feb, 2026</div>
+                            <h3 class="text-xl font-bold font-serif mb-3 group-hover:text-blue-400 transition leading-snug">El secreto para un Ribeye término medio perfecto, explicado paso a paso</h3>
+                            <p class="text-gray-400 text-sm line-clamp-3 mb-4">No arruines un corte de calidad de exportación. Te enseñamos la técnica de sellado inverso que utilizan los mejores restaurantes.</p>
+                            <span class="text-gray-300 text-sm font-semibold mt-auto flex items-center gap-1 group-hover:text-blue-400 transition">Leer más <i class="fa-solid fa-chevron-right text-xs"></i></span>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="bg-gray-900 rounded-xl overflow-hidden border border-gray-800 hover:border-gray-600 transition duration-300 group cursor-pointer flex flex-col">
+                    <a href="#" class="flex flex-col flex-grow">
+                        <div class="relative h-56 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1588168333986-5078d3ae3976?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cocina restaurante" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                            <div class="absolute top-3 left-3 bg-carnovo-gold text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Food Service</div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="text-xs text-gray-500 mb-3"><i class="fa-regular fa-calendar mr-1"></i> 25 de Feb, 2026</div>
+                            <h3 class="text-xl font-bold font-serif mb-3 group-hover:text-carnovo-gold transition leading-snug">¿Cómo calcular el porcentaje de merma en cortes con hueso para tu restaurante?</h3>
+                            <p class="text-gray-400 text-sm line-clamp-3 mb-4">La rentabilidad de tu menú depende del rendimiento real de la carne. Aprende a costear correctamente tus platillos estelares.</p>
+                            <span class="text-gray-300 text-sm font-semibold mt-auto flex items-center gap-1 group-hover:text-carnovo-gold transition">Leer más <i class="fa-solid fa-chevron-right text-xs"></i></span>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="bg-gray-900 rounded-xl overflow-hidden border border-gray-800 hover:border-gray-600 transition duration-300 group cursor-pointer flex flex-col">
+                    <a href="#" class="flex flex-col flex-grow">
+                        <div class="relative h-56 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1628268909376-e8c44bb3153f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cortes empaquetados" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                            <div class="absolute top-3 left-3 bg-gray-700 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Noticias Carnovo</div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="text-xs text-gray-500 mb-3"><i class="fa-regular fa-calendar mr-1"></i> 20 de Feb, 2026</div>
+                            <h3 class="text-xl font-bold font-serif mb-3 group-hover:text-white transition leading-snug">Inauguramos nueva línea de empaque al vacío de alto volumen</h3>
+                            <p class="text-gray-400 text-sm line-clamp-3 mb-4">Ampliamos nuestra infraestructura para garantizar una mayor vida de anaquel en pedidos mayoristas a nivel nacional.</p>
+                            <span class="text-gray-300 text-sm font-semibold mt-auto flex items-center gap-1 group-hover:text-white transition">Leer más <i class="fa-solid fa-chevron-right text-xs"></i></span>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="bg-gray-900 rounded-xl overflow-hidden border border-gray-800 hover:border-gray-600 transition duration-300 group cursor-pointer flex flex-col">
+                    <a href="#" class="flex flex-col flex-grow">
+                        <div class="relative h-56 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Camión refrigerado" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                            <div class="absolute top-3 left-3 bg-carnovo-red text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Mayoreo</div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="text-xs text-gray-500 mb-3"><i class="fa-regular fa-calendar mr-1"></i> 15 de Feb, 2026</div>
+                            <h3 class="text-xl font-bold font-serif mb-3 group-hover:text-carnovo-red transition leading-snug">La importancia de la red de frío ininterrumpida en el transporte de cerdo</h3>
+                            <p class="text-gray-400 text-sm line-clamp-3 mb-4">Garantizar la inocuidad desde la planta hasta el andén de carga. Conoce nuestros protocolos de logística nacional.</p>
+                            <span class="text-gray-300 text-sm font-semibold mt-auto flex items-center gap-1 group-hover:text-carnovo-red transition">Leer más <i class="fa-solid fa-chevron-right text-xs"></i></span>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="bg-gray-900 rounded-xl overflow-hidden border border-gray-800 hover:border-gray-600 transition duration-300 group cursor-pointer flex flex-col">
+                    <a href="#" class="flex flex-col flex-grow">
+                        <div class="relative h-56 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cortes crudos" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                            <div class="absolute top-3 left-3 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Guía de Cortes</div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="text-xs text-gray-500 mb-3"><i class="fa-regular fa-calendar mr-1"></i> 10 de Feb, 2026</div>
+                            <h3 class="text-xl font-bold font-serif mb-3 group-hover:text-blue-400 transition leading-snug">Picaña vs New York: ¿Cuál elegir para tu próximo evento?</h3>
+                            <p class="text-gray-400 text-sm line-clamp-3 mb-4">Comparamos textura, sabor y métodos de cocción de dos de los reyes indiscutibles de la parrilla moderna.</p>
+                            <span class="text-gray-300 text-sm font-semibold mt-auto flex items-center gap-1 group-hover:text-blue-400 transition">Leer más <i class="fa-solid fa-chevron-right text-xs"></i></span>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="bg-gray-900 rounded-xl overflow-hidden border border-gray-800 hover:border-gray-600 transition duration-300 group cursor-pointer flex flex-col">
+                    <a href="#" class="flex flex-col flex-grow">
+                        <div class="relative h-56 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1615861184283-bc27431e712a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Empacadora" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                            <div class="absolute top-3 left-3 bg-carnovo-red text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Mercado</div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="text-xs text-gray-500 mb-3"><i class="fa-regular fa-calendar mr-1"></i> 5 de Feb, 2026</div>
+                            <h3 class="text-xl font-bold font-serif mb-3 group-hover:text-carnovo-red transition leading-snug">Proyecciones de exportación avícola para el segundo semestre</h3>
+                            <p class="text-gray-400 text-sm line-clamp-3 mb-4">Análisis de los mercados internacionales y cómo impactará la demanda externa en el inventario local de pollo y pavo.</p>
+                            <span class="text-gray-300 text-sm font-semibold mt-auto flex items-center gap-1 group-hover:text-carnovo-red transition">Leer más <i class="fa-solid fa-chevron-right text-xs"></i></span>
+                        </div>
+                    </a>
+                </article>
+            </div>
+
+            <!-- Paginación -->
+            <div class="mt-16 flex justify-center gap-2">
+                <button class="w-10 h-10 rounded-full bg-gray-800 text-gray-400 hover:bg-carnovo-red hover:text-white transition flex items-center justify-center" aria-label="Página anterior"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="w-10 h-10 rounded-full bg-carnovo-red text-white font-bold flex items-center justify-center shadow-lg">1</button>
+                <button class="w-10 h-10 rounded-full bg-gray-800 text-gray-400 hover:bg-gray-700 transition flex items-center justify-center font-bold">2</button>
+                <button class="w-10 h-10 rounded-full bg-gray-800 text-gray-400 hover:bg-gray-700 transition flex items-center justify-center font-bold">3</button>
+                <span class="w-10 h-10 flex items-center justify-center text-gray-500">...</span>
+                <button class="w-10 h-10 rounded-full bg-gray-800 text-gray-400 hover:bg-carnovo-red hover:text-white transition flex items-center justify-center" aria-label="Página siguiente"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- NEWSLETTER CTA -->
+    <section class="py-20 relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1558030006-450675393462?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="" class="w-full h-full object-cover opacity-20" role="presentation">
+            <div class="absolute inset-0 bg-carnovo-red/90 mix-blend-multiply"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-carnovo-dark to-transparent"></div>
+        </div>
+        <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
+            <h2 class="text-4xl font-serif font-bold text-white mb-4 drop-shadow-lg">Únete al Círculo Carnovo</h2>
+            <p class="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">Recibe nuestro análisis de mercado mayorista, descuentos exclusivos de la tienda virtual y guías de rendimiento directamente en tu correo.</p>
+            <form class="flex flex-col sm:flex-row gap-3 justify-center max-w-xl mx-auto" action="#" method="post">
+                <label for="blog-email" class="sr-only">Correo electrónico</label>
+                <input id="blog-email" type="email" name="email" placeholder="Tu correo electrónico empresarial o personal" class="flex-grow px-6 py-4 rounded-lg bg-white/10 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:border-white focus:bg-white/20 backdrop-blur-sm transition">
+                <button type="submit" class="bg-white text-carnovo-red font-bold px-8 py-4 rounded-lg hover:bg-gray-100 transition shadow-xl whitespace-nowrap">
+                    Suscribirme
+                </button>
+            </form>
+            <p class="text-xs text-gray-400 mt-4">Cero spam. Solo información valiosa para tu negocio o tu asador.</p>
+        </div>
+    </section>
+
+    <!-- FOOTER (alineado con sitio principal) -->
+    <footer class="bg-gray-950 border-t border-gray-900 pt-16 pb-8 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <a href="../" class="flex items-center gap-2 mb-4 md:mb-0">
+                    <img src="../carnovo-logo.png" alt="Carnovo Foods" class="h-14 w-auto object-contain logo-white">
+                </a>
+                <div class="text-gray-600 text-sm text-center md:text-right">
+                    <p>Potenciado por WordPress & WooCommerce</p>
+                    <p class="mt-1">Designed by <span class="text-carnovo-red font-bold tracking-widest">POTENTTIAL GROUP</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
