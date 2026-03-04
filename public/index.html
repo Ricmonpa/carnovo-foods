@@ -57,6 +57,8 @@
         .hero-red-text {
             text-shadow: 0 2px 4px rgba(0,0,0,0.9), 0 4px 16px rgba(0,0,0,0.8), 0 8px 32px rgba(0,0,0,0.6);
         }
+        .dropdown-panel { opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity 0.2s, transform 0.2s, visibility 0.2s; }
+        .group:hover .dropdown-panel { opacity: 1; visibility: visible; transform: translateY(0); }
     </style>
 </head>
 <body class="bg-carnovo-dark text-white font-sans antialiased overflow-x-hidden">
@@ -69,17 +71,35 @@
                 <a href="#inicio" class="flex-shrink-0 flex items-center">
                     <img src="carnovo-logo.png" alt="Carnovo Foods & Meat Trader" class="h-32 sm:h-32 md:h-32 lg:h-40 w-auto object-contain object-left logo-white">
                 </a>
-                <!-- Menú Desktop -->
+                <!-- Menú Desktop: Nosotros, Catálogo (dropdown), Servicios (dropdown), Blog, Contacto, Cotizar -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#nosotros" class="text-gray-300 hover:text-white transition font-medium tracking-wide">Nosotros</a>
-                    <a href="#catalogo-mayoreo" class="text-gray-300 hover:text-white transition font-medium tracking-wide">Catálogo Mayoreo</a>
-                    <a href="#medio-mayoreo" class="text-gray-300 hover:text-white transition font-medium tracking-wide">Medio Mayoreo</a>
+                    <div class="relative group">
+                        <a href="#catalogo" class="text-gray-300 group-hover:text-white transition font-medium tracking-wide cursor-pointer flex items-center gap-1">Catálogo <i class="fa-solid fa-chevron-down text-xs"></i></a>
+                        <div class="dropdown-panel absolute top-full left-0 pt-2 w-44 z-50">
+                            <div class="bg-gray-900 border border-gray-700 rounded-xl py-2 shadow-xl">
+                                <a href="#catalogo-res" class="block px-4 py-2.5 text-gray-300 hover:bg-carnovo-red/20 hover:text-white transition text-sm">Res</a>
+                                <a href="#catalogo-cerdo" class="block px-4 py-2.5 text-gray-300 hover:bg-carnovo-red/20 hover:text-white transition text-sm">Cerdo</a>
+                                <a href="#catalogo-pollo" class="block px-4 py-2.5 text-gray-300 hover:bg-carnovo-red/20 hover:text-white transition text-sm">Pollo</a>
+                                <a href="#catalogo-empanizados" class="block px-4 py-2.5 text-gray-300 hover:bg-carnovo-red/20 hover:text-white transition text-sm">Empanizados</a>
+                                <a href="#catalogo-papa" class="block px-4 py-2.5 text-gray-300 hover:bg-carnovo-red/20 hover:text-white transition text-sm">Papa</a>
+                                <a href="#catalogo-pescado" class="block px-4 py-2.5 text-gray-300 hover:bg-carnovo-red/20 hover:text-white transition text-sm">Pescado</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <span class="text-gray-300 group-hover:text-white transition font-medium tracking-wide cursor-pointer flex items-center gap-1">Servicios <i class="fa-solid fa-chevron-down text-xs"></i></span>
+                        <div class="dropdown-panel absolute top-full left-0 pt-2 w-48 z-50">
+                            <div class="bg-gray-900 border border-gray-700 rounded-xl py-2 shadow-xl">
+                                <a href="#catalogo-mayoreo" class="block px-4 py-2.5 text-gray-300 hover:bg-carnovo-red/20 hover:text-white transition text-sm">Mayoreo</a>
+                                <a href="#medio-mayoreo" class="block px-4 py-2.5 text-gray-300 hover:bg-carnovo-gold/20 hover:text-white transition text-sm">Medio Mayoreo</a>
+                                <a href="#ruta" class="block px-4 py-2.5 text-gray-300 hover:bg-blue-500/20 hover:text-white transition text-sm">Ruta</a>
+                            </div>
+                        </div>
+                    </div>
                     <a href="blog/" class="text-gray-300 hover:text-white transition font-medium tracking-wide">Blog</a>
                     <a href="contacto/" class="text-gray-300 hover:text-white transition font-medium tracking-wide">Contacto</a>
-                    <!-- Botón B2B -->
-                    <a href="contacto/" class="bg-carnovo-red text-white px-8 py-3 rounded-full font-bold hover:bg-red-700 transition shadow-[0_0_20px_rgba(185,28,28,0.4)]">
-                        Cotizar Volumen
-                    </a>
+                    <a href="contacto/" class="bg-carnovo-red text-white px-8 py-3 rounded-full font-bold hover:bg-red-700 transition shadow-[0_0_20px_rgba(185,28,28,0.4)]">Cotizar Volumen</a>
                 </div>
             </div>
         </div>
@@ -123,6 +143,84 @@
             <i class="fa-solid fa-chevron-down text-white/50 text-xl block text-center"></i>
         </a>
     </div>
+
+    <!-- SECCIÓN: CATÁLOGO (categorías en scroll) -->
+    <section id="catalogo" class="py-24 section-bg border-t border-gray-800 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold tracking-widest text-carnovo-red uppercase mb-3">Productos</h2>
+                <h3 class="text-4xl md:text-5xl font-serif font-bold text-white mb-6">Catálogo por categoría</h3>
+                <p class="text-gray-400 max-w-3xl mx-auto text-lg">Res, cerdo, pollo, empanizados, papa y pescado. Calidad Carnovo para cada línea de negocio.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a id="catalogo-res" href="catalogo/" class="bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-carnovo-red transition duration-300 group flex items-center gap-4 scroll-mt-24">
+                    <div class="w-14 h-14 bg-carnovo-red/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-drumstick-bite text-2xl text-carnovo-red"></i>
+                    </div>
+                    <div class="text-left">
+                        <h4 class="text-xl font-bold group-hover:text-carnovo-red transition">Res</h4>
+                        <p class="text-gray-400 text-sm">Cortes premium y canal</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-gray-500 group-hover:text-carnovo-red ml-auto transition"></i>
+                </a>
+                <a id="catalogo-cerdo" href="catalogo/" class="bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-carnovo-red transition duration-300 group flex items-center gap-4 scroll-mt-24">
+                    <div class="w-14 h-14 bg-carnovo-red/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-bacon text-2xl text-carnovo-red"></i>
+                    </div>
+                    <div class="text-left">
+                        <h4 class="text-xl font-bold group-hover:text-carnovo-red transition">Cerdo</h4>
+                        <p class="text-gray-400 text-sm">Pierna, lomo, costilla y más</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-gray-500 group-hover:text-carnovo-red ml-auto transition"></i>
+                </a>
+                <a id="catalogo-pollo" href="catalogo/" class="bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-carnovo-red transition duration-300 group flex items-center gap-4 scroll-mt-24">
+                    <div class="w-14 h-14 bg-carnovo-red/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-egg text-2xl text-carnovo-gold"></i>
+                    </div>
+                    <div class="text-left">
+                        <h4 class="text-xl font-bold group-hover:text-carnovo-red transition">Pollo</h4>
+                        <p class="text-gray-400 text-sm">Entero, piezas y porcionado</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-gray-500 group-hover:text-carnovo-red ml-auto transition"></i>
+                </a>
+                <a id="catalogo-empanizados" href="catalogo/" class="bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-carnovo-gold transition duration-300 group flex items-center gap-4 scroll-mt-24">
+                    <div class="w-14 h-14 bg-carnovo-gold/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-bread-slice text-2xl text-carnovo-gold"></i>
+                    </div>
+                    <div class="text-left">
+                        <h4 class="text-xl font-bold group-hover:text-carnovo-gold transition">Empanizados</h4>
+                        <p class="text-gray-400 text-sm">Nuggets, milanesas y especialidades</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-gray-500 group-hover:text-carnovo-gold ml-auto transition"></i>
+                </a>
+                <a id="catalogo-papa" href="catalogo/" class="bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-carnovo-gold transition duration-300 group flex items-center gap-4 scroll-mt-24">
+                    <div class="w-14 h-14 bg-carnovo-gold/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-seedling text-2xl text-carnovo-gold"></i>
+                    </div>
+                    <div class="text-left">
+                        <h4 class="text-xl font-bold group-hover:text-carnovo-gold transition">Papa</h4>
+                        <p class="text-gray-400 text-sm">Papas para freír y complementos</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-gray-500 group-hover:text-carnovo-gold ml-auto transition"></i>
+                </a>
+                <a id="catalogo-pescado" href="catalogo/" class="bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-blue-500 transition duration-300 group flex items-center gap-4 scroll-mt-24">
+                    <div class="w-14 h-14 bg-blue-500/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-fish text-2xl text-blue-400"></i>
+                    </div>
+                    <div class="text-left">
+                        <h4 class="text-xl font-bold group-hover:text-blue-400 transition">Pescado</h4>
+                        <p class="text-gray-400 text-sm">Fresco y congelado</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-gray-500 group-hover:text-blue-400 ml-auto transition"></i>
+                </a>
+            </div>
+            <div class="text-center mt-12">
+                <a href="catalogo/" class="inline-flex items-center gap-2 bg-carnovo-red text-white font-bold px-8 py-3 rounded-full hover:bg-red-700 transition shadow-[0_0_20px_rgba(185,28,28,0.4)]">
+                    Ver catálogo completo <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!-- SECCIÓN: NOSOTROS -->
     <section id="nosotros" class="py-24 section-bg border-t border-gray-800 scroll-mt-20">

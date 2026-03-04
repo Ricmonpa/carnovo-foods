@@ -57,6 +57,8 @@
         .hero-red-text {
             text-shadow: 0 2px 4px rgba(0,0,0,0.9), 0 4px 16px rgba(0,0,0,0.8), 0 8px 32px rgba(0,0,0,0.6);
         }
+        .dropdown-panel { opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity 0.2s, transform 0.2s, visibility 0.2s; }
+        .group:hover .dropdown-panel { opacity: 1; visibility: visible; transform: translateY(0); }
     </style>
 </head>
 <body class="bg-carnovo-dark text-white font-sans antialiased overflow-x-hidden">
@@ -72,14 +74,20 @@
                 <!-- Menú Desktop -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#nosotros" class="text-gray-300 hover:text-white transition font-medium tracking-wide">Nosotros</a>
-                    <a href="#catalogo-mayoreo" class="text-gray-300 hover:text-white transition font-medium tracking-wide">Catálogo Mayoreo</a>
-                    <a href="#medio-mayoreo" class="text-gray-300 hover:text-white transition font-medium tracking-wide">Medio Mayoreo</a>
+                    <a href="catalogo/" class="text-gray-300 hover:text-white transition font-medium tracking-wide">Catálogo</a>
+                    <div class="relative group">
+                        <span class="text-gray-300 group-hover:text-white transition font-medium tracking-wide cursor-pointer flex items-center gap-1">Servicios <i class="fa-solid fa-chevron-down text-xs"></i></span>
+                        <div class="dropdown-panel absolute top-full left-0 pt-2 w-48 z-50">
+                            <div class="bg-gray-900 border border-gray-700 rounded-xl py-2 shadow-xl">
+                                <a href="#catalogo-mayoreo" class="block px-4 py-2.5 text-gray-300 hover:bg-carnovo-red/20 hover:text-white transition text-sm">Mayoreo</a>
+                                <a href="#medio-mayoreo" class="block px-4 py-2.5 text-gray-300 hover:bg-carnovo-gold/20 hover:text-white transition text-sm">Medio Mayoreo</a>
+                                <a href="#ruta" class="block px-4 py-2.5 text-gray-300 hover:bg-blue-500/20 hover:text-white transition text-sm">Ruta</a>
+                            </div>
+                        </div>
+                    </div>
                     <a href="blog/" class="text-gray-300 hover:text-white transition font-medium tracking-wide">Blog</a>
                     <a href="#contacto" class="text-gray-300 hover:text-white transition font-medium tracking-wide">Contacto</a>
-                    <!-- Botón B2B -->
-                    <a href="#contacto" class="bg-carnovo-red text-white px-8 py-3 rounded-full font-bold hover:bg-red-700 transition shadow-[0_0_20px_rgba(185,28,28,0.4)]">
-                        Cotizar Volumen
-                    </a>
+                    <a href="#contacto" class="bg-carnovo-red text-white px-8 py-3 rounded-full font-bold hover:bg-red-700 transition shadow-[0_0_20px_rgba(185,28,28,0.4)]">Cotizar Volumen</a>
                 </div>
             </div>
         </div>

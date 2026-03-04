@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo | Carnovo Foods</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'carnovo-red': '#B91C1C',
+                        'carnovo-dark': '#0F172A',
+                        'carnovo-gold': '#F59E0B',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .section-bg {
+            background-color: #0F172A;
+            background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+        }
+        .logo-white { filter: brightness(0) invert(1); }
+        .dropdown-panel { opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity 0.2s, transform 0.2s, visibility 0.2s; }
+        .group:hover .dropdown-panel { opacity: 1; visibility: visible; transform: translateY(0); }
+    </style>
+</head>
+<body class="bg-carnovo-dark text-white font-sans antialiased">
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 bg-carnovo-dark/95 backdrop-blur-md border-b border-gray-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 sm:h-20 py-1">
+                <a href="../" class="flex-shrink-0 flex items-center">
+                    <img src="../carnovo-logo.png" alt="Carnovo Foods" class="h-32 sm:h-32 md:h-32 lg:h-40 w-auto object-contain object-left logo-white">
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../#nosotros" class="text-gray-300 hover:text-white transition font-medium tracking-wide">Nosotros</a>
+                    <a href="index.html" class="text-carnovo-red font-bold tracking-wide border-b-2 border-carnovo-red pb-1">Catálogo</a>
+                    <div class="relative group">
+                        <span class="text-gray-300 group-hover:text-white transition font-medium tracking-wide cursor-pointer flex items-center gap-1">Servicios <i class="fa-solid fa-chevron-down text-xs"></i></span>
+                        <div class="dropdown-panel absolute top-full left-0 pt-2 w-48">
+                            <div class="bg-gray-900 border border-gray-700 rounded-xl py-2 shadow-xl">
+                                <a href="../#catalogo-mayoreo" class="block px-4 py-2.5 text-gray-300 hover:bg-carnovo-red/20 hover:text-white transition text-sm">Mayoreo</a>
+                                <a href="../#medio-mayoreo" class="block px-4 py-2.5 text-gray-300 hover:bg-carnovo-gold/20 hover:text-white transition text-sm">Medio Mayoreo</a>
+                                <a href="../#ruta" class="block px-4 py-2.5 text-gray-300 hover:bg-blue-500/20 hover:text-white transition text-sm">Ruta</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="../blog/" class="text-gray-300 hover:text-white transition font-medium tracking-wide">Blog</a>
+                    <a href="../contacto/" class="text-gray-300 hover:text-white transition font-medium tracking-wide">Contacto</a>
+                    <a href="../contacto/" class="bg-carnovo-red text-white px-6 py-2 rounded-full font-bold hover:bg-red-700 transition text-sm">Cotizar Volumen</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER CATÁLOGO -->
+    <header class="pt-36 pb-16 section-bg border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-serif font-bold mb-4">Catálogo de productos</h1>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto">Res, cerdo, pollo, empanizados, papa, pescado. Calidad Carnovo para cada línea de negocio.</p>
+        </div>
+    </header>
+
+    <!-- CATEGORÍAS -->
+    <main class="py-16 section-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="../contacto/" class="bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-carnovo-red transition group text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-carnovo-red/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition"><i class="fa-solid fa-drumstick-bite text-4xl text-carnovo-red"></i></div>
+                    <h2 class="text-2xl font-bold mb-2">Res</h2>
+                    <p class="text-gray-400 text-sm">Cortes de res para mayoreo, medio mayoreo y ruta.</p>
+                </a>
+                <a href="../contacto/" class="bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-carnovo-gold transition group text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-carnovo-gold/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition"><i class="fa-solid fa-bacon text-4xl text-carnovo-gold"></i></div>
+                    <h2 class="text-2xl font-bold mb-2">Cerdo</h2>
+                    <p class="text-gray-400 text-sm">Línea de cerdo para todos los canales.</p>
+                </a>
+                <a href="../contacto/" class="bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-blue-500 transition group text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-blue-500/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition"><i class="fa-solid fa-kiwi-bird text-4xl text-blue-400"></i></div>
+                    <h2 class="text-2xl font-bold mb-2">Pollo</h2>
+                    <p class="text-gray-400 text-sm">Pollo y derivados para tu operación.</p>
+                </a>
+                <a href="../contacto/" class="bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-carnovo-red transition group text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-carnovo-red/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition"><i class="fa-solid fa-bread-slice text-4xl text-carnovo-red"></i></div>
+                    <h2 class="text-2xl font-bold mb-2">Empanizados</h2>
+                    <p class="text-gray-400 text-sm">Productos empanizados listos para freír o hornear.</p>
+                </a>
+                <a href="../contacto/" class="bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-carnovo-gold transition group text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-carnovo-gold/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition"><i class="fa-solid fa-seedling text-4xl text-carnovo-gold"></i></div>
+                    <h2 class="text-2xl font-bold mb-2">Papa</h2>
+                    <p class="text-gray-400 text-sm">Papa y papas procesadas para acompañamiento.</p>
+                </a>
+                <a href="../contacto/" class="bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-blue-500 transition group text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-blue-500/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition"><i class="fa-solid fa-fish text-4xl text-blue-400"></i></div>
+                    <h2 class="text-2xl font-bold mb-2">Pescado</h2>
+                    <p class="text-gray-400 text-sm">Pescado y mariscos para tu negocio.</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-950 border-t border-gray-900 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <img src="../carnovo-logo.png" alt="Carnovo Foods" class="h-14 w-auto object-contain logo-white">
+            <p class="text-gray-600 text-sm">Designed by <span class="text-carnovo-red font-bold">POTENTTIAL GROUP</span></p>
+        </div>
+    </footer>
+
+</body>
+</html>
